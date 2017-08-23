@@ -1,0 +1,28 @@
+{
+  "name": "eskirex/cache",
+  "description": "Cache Handler",
+  "version": "1.0.0-dev",
+  "keywords": [
+    "cache",
+    "eskirex"
+  ],
+  "homepage": "http://www.eskirex.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Can Korkmaz",
+      "email": "eskirex@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0"
+  },
+  "config": {
+    "minimum-stability": "dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Eskirex\\": "src/"
+    }
+  }
+}
