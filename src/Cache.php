@@ -22,13 +22,16 @@
       }
       $value = serialize($value);
       file_put_contents($this->path . $name . $this->extension, $value);
+      return true;
     }
 
     public function get ($name)
     {
       if (file_exists($this->path . $name . $this->extension))
       {
-        return unserialize(file_get_contents($this->path . $name . $this->extension));
+          $cache = file_get_contents($this->path . $name . $this->extension);
+          $cache = unserialize($cache);
+        return $cache;
       }
       else
       {
@@ -51,5 +54,6 @@
     {
       $file = fopen($this->path . $name . $this->extension, 'a+');
       fclose($file);
+      return true;
     }
   }
